@@ -1,0 +1,128 @@
+$grisOscuroTitulos: #424242;
+$grisClaroFecha: #5f6368;
+$grisTexto: #414549;
+$azul: #4285f4;
+$centrar: center;
+$flotar_der: right;
+$flotar_izq: left;
+$margin: 5%;
+$none: none;
+$padding_der: 5%;
+$font-weight-titulo: bold;
+//$border_top: 4px solid #4285f4 ;
+$inline_block: inline-block;
+$font_size-titulo: 1.5rem;
+$font_style: normal;
+$letter_spacing: -1px;
+$font_family_titulo: 'Roboto Mono', sans-serif;
+$font_family_fecha_resumen: 'Roboto Mono', monospace;
+$pointer: pointer;
+$line_height_titulo: 32px;
+$line_height: 24px;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0px auto;
+}
+
+@mixin title {
+    font: {
+        family: $font_family_titulo;
+        size: $font_size_titulo;
+        weight: $font_weight_titulo;
+        style: $font_style;
+    }
+    line-height: $line_height_titulo;
+    color: $grisOscuroTitulos;
+    letter-spacing: $letter_spacing;
+}
+
+h3{
+    @include title;   
+}
+
+@mixin textoResumen {
+    font: {
+        family: $font_family_fecha_resumen;
+        size: 15px;
+        style: $font_style;
+    }
+    line-height: $line_height_titulo;
+    color: $grisTexto;
+    letter-spacing: $letter_spacing;
+}
+
+p{
+    @include textoResumen;
+}
+
+
+[class*="col-"] {
+    min-height: 7px;
+    padding: 12px;
+    float: left;
+}
+
+@function anchoColumnas($columns) {
+    @return percentage(($columns/12));
+}
+
+@for $numColumna from 1 through 12 {
+    .col-#{$numColumna} {
+        width: anchoColumnas($numColumna);
+    }
+}
+
+[class*="offset-col-"] {
+    min-height: 7px;
+    padding: 12px;
+    float: left;
+}
+
+@function offsetColumnas($columns) {
+    @return percentage(($columns/12));
+}
+
+@for $numColumna from 1 through 12 {
+    .offset-col-#{$numColumna} {
+        margin-left: offsetColumnas($numColumna);
+    }
+}
+
+.row {
+    &:before {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        @extend .row:before;
+        clear: both;
+    }
+}
+
+.home {
+    text-align: $centrar;
+    margin: $margin; 
+    & .icono {
+        float: $flotar_der;
+    }
+    & li {
+        list-style: none;
+        display: inline-block;
+        padding: 20px;
+    }
+}
+
+.lineaAzul {
+    padding: 0;
+    min-height: 0;
+    border: 2px solid $azul;
+    text-align: center;
+}

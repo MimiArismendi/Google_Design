@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0px auto; }
+
+h3 {
+  font-family: "Roboto Mono", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 32px;
+  color: #424242;
+  letter-spacing: -1px; }
+
+p {
+  font-family: "Roboto Mono", monospace;
+  font-size: 15px;
+  font-style: normal;
+  line-height: 32px;
+  color: #414549;
+  letter-spacing: -1px; }
+
+[class*="col-"] {
+  min-height: 7px;
+  padding: 12px;
+  float: left; }
+
+.col-1 {
+  width: 8.33333%; }
+
+.col-2 {
+  width: 16.66667%; }
+
+.col-3 {
+  width: 25%; }
+
+.col-4 {
+  width: 33.33333%; }
+
+.col-5 {
+  width: 41.66667%; }
+
+.col-6 {
+  width: 50%; }
+
+.col-7 {
+  width: 58.33333%; }
+
+.col-8 {
+  width: 66.66667%; }
+
+.col-9 {
+  width: 75%; }
+
+.col-10 {
+  width: 83.33333%; }
+
+.col-11 {
+  width: 91.66667%; }
+
+.col-12 {
+  width: 100%; }
+
+[class*="offset-col-"] {
+  min-height: 7px;
+  padding: 12px;
+  float: left; }
+
+.offset-col-1 {
+  margin-left: 8.33333%; }
+
+.offset-col-2 {
+  margin-left: 16.66667%; }
+
+.offset-col-3 {
+  margin-left: 25%; }
+
+.offset-col-4 {
+  margin-left: 33.33333%; }
+
+.offset-col-5 {
+  margin-left: 41.66667%; }
+
+.offset-col-6 {
+  margin-left: 50%; }
+
+.offset-col-7 {
+  margin-left: 58.33333%; }
+
+.offset-col-8 {
+  margin-left: 66.66667%; }
+
+.offset-col-9 {
+  margin-left: 75%; }
+
+.offset-col-10 {
+  margin-left: 83.33333%; }
+
+.offset-col-11 {
+  margin-left: 91.66667%; }
+
+.offset-col-12 {
+  margin-left: 100%; }
+
+.row:before, .row:after {
+  content: " ";
+  display: table; }
+.row:after {
+  clear: both; }
+
+.home {
+  text-align: center;
+  margin: 5%; }
+  .home .icono {
+    float: right; }
+  .home li {
+    list-style: none;
+    display: inline-block;
+    padding: 20px; }
+
+.lineaAzul {
+  padding: 0;
+  min-height: 0;
+  border: 2px solid #4285f4;
+  text-align: center; }
+
+/*# sourceMappingURL=style.css.map */
